@@ -1,6 +1,6 @@
 // Welcome message
 function getName() {
-  let name = "";
+  let name = prompt("Enter your name";
   do {
     name = prompt("Please enter your name (letters only):", "");
   } while (!/^[A-Za-z]+$/.test(name));
@@ -8,7 +8,7 @@ function getName() {
 }
 const userName = getName();
 document.getElementById("welcomeMessage").innerHTML = `
-  Hi ${userName}, Welcome to My Portfolio<br>
+  Hi ${userName}, Welcome to My Portfolio
   This is a brief introduction about myself and my work.
 `;
 
