@@ -1,16 +1,16 @@
 // Welcome message
-function getName() {
+function greet-name() {
   let name = prompt("Enter your name";
   do {
     name = prompt("Please enter your name (letters only):", "");
   } while (!/^[A-Za-z]+$/.test(name));
   return name;
 }
-const userName = getName();
-document.getElementById("welcomeMessage").innerHTML = `
-  Hi ${userName}, Welcome to My Portfolio
+const name = getName();{
+document.getElementById("greet-name").innerHTML = `
+  Hi ${name}, Welcome to My Portfolio
   This is a brief introduction about myself and my work.
-`;
+`;}
 
 // Contact form validation and display
 document.getElementById("contactForm").addEventListener("submit", function(e) {
