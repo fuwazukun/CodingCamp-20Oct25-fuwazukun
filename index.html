@@ -3,31 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Pages Site</title>
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>This is my first hosted page.</p>
+  <!-- Header -->
+  <hr>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Profile</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <!-- Slideshow -->
+  <section class="slideshow">
+    <img src="slide1.jpg" alt="Slide 1">
+  </section>
+  <hr>
+  <div class="thin-gap"></div>
+  <hr>
+
+  <!-- Headquarters Section -->
+  <section class="our-headquarters">
+    <h1>Our Headquarters</h1>
+    <div class="hq">
+      <div class="map-circle">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126893.19461803984!2d106.6631168!3d-6.340608!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4734a8de3%3A0xb2ad7eacc88d7f3e!2sRevoU!5e0!3m2!1sid!2sid!4v1761297501282!5m2!1sid!2sid" 
+          width="200" 
+          height="200" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p>Jakarta</p>
+    </div>
+  </section>
+  <hr>
+
+  <!-- Contact Form Section -->
+  <section class="contact">
+    <h2>Message Us</h2>
+    <div class="contact-container">
+      <div class="contact-left">
+        <form id="messageForm">
+          <label for="name" id="nameLabel">Nama:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" pattern="[A-Za-z\s]+" title="Letters only" required>
+
+          <label for="birthdate" id="birthLabel">Tanggal Lahir:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+
+          <label id="genderLabel">Jenis Kelamin:</label>
+          <div class="gender-options">
+            <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+            <label for="male" id="maleLabel">Laki-Laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan">
+            <label for="female" id="femaleLabel">Perempuan</label>
+          </div>
+
+          <label for="message" id="msgLabel">Pesan:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+          <button type="submit" id="submitBtn">Send</button>
+        </form>
+      </div>
+      <div class="contact-right">
+      </div>
+    </div>
+
+    <!-- Display submitted values with timestamp -->
+    <div id="formResult"></div>
+  </section>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by RevoU</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Language detection
+    const userLang = navigator.language || navigator.userLanguage;
+    if(userLang.startsWith('id')) {
+      document.getElementById('nameLabel').innerText = "Nama:";
+      document.getElementById('birthLabel').innerText = "Tanggal Lahir:";
+      document.getElementById('genderLabel').innerText = "Jenis Kelamin:";
+      document.getElementById('maleLabel').innerText = "Laki-Laki";
+      document.getElementById('femaleLabel').innerText = "Perempuan";
+      document.getElementById('msgLabel').innerText = "Pesan:";
+      document.getElementById('name').placeholder = "Nama Anda";
+      document.getElementById('message').placeholder = "Pesan Anda";
+      document.getElementById('submitBtn').innerText = "Kirim";
+    }
+
+    const form = document.getElementById('messageForm');
+    const resultDiv = document.getElementById('formResult');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const birthdate = document.getElementById('birthdate').value;
+      const gender = document.querySelector('input[name="gender"]:checked')?.value;
+      const message = document.getElementById('message').value;
+      const now = new Date();
+
+      // JS validation for letters only
+      if(!/^[A-Za-z\s]+$/.test(name)) {
+        alert("Nama must contain letters only!");
+        return;
+      }
+
+      // Popup alert
+      alert("Your information has been submitted!");
+
+      // Show submitted values with timestamp
+      resultDiv.innerHTML = `
+        <h3>Form Submitted at: ${now}</h3>
+        <p><strong>Nama:</strong> ${name}</p>
+        <p><strong>Tanggal Lahir:</strong> ${birthdate}</p>
+        <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+        <p><strong>Pesan:</strong> ${message}</p>
+      `;
+
+      form.reset();
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
