@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+header .logo {
+  height: 50px;
+  border-radius: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 20px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  padding: 5px 10px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+  margin: 10px 0;
+}
+
+.slideshow img {
+  width: 100%;
+  max-width: 1366px;
+  height: 578px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.our-headquarters {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.our-headquarters h1 {
+  margin-bottom: 20px;
+}
+
+.our-headquarters .hq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contact {
+  padding: 20px 40px;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact-left button {
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-left button:hover {
+  background-color: #0056b3;
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#formResult {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  background-color: #f0f8ff;
+}
+
+footer {
+  text-align: right;
+  padding: 10px 40px;
+  font-size: 14px;
+  color: #555;
+}
