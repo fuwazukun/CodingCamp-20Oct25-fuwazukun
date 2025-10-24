@@ -4,19 +4,6 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
-/* Welcome message */
-.welcome-message {
-  width: 100%;
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
 /* Header */
 header {
   display: flex;
@@ -189,3 +176,4 @@ footer {
   font-size: 14px;
   color: #555;
 }
+
