@@ -5,6 +5,19 @@
   font-family: Arial, sans-serif;
 }
 
+/* Welcome message */
+.welcome-message {
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -17,6 +30,7 @@ header .logo {
   border-radius: 10px;
 }
 
+/* Navbar squircle background */
 header nav ul {
   list-style: none;
   display: inline-flex;
@@ -34,6 +48,7 @@ header nav ul li a {
   padding: 5px 10px;
 }
 
+/* Separator */
 hr {
   border: none;
   height: 1px;
@@ -41,6 +56,7 @@ hr {
   margin: 10px 0;
 }
 
+/* Slideshow */
 .slideshow img {
   width: 100%;
   max-width: 1366px;
@@ -51,6 +67,32 @@ hr {
   border-radius: 10px;
 }
 
+/* Our Profile Section */
+.our-profile {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.our-profile h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.our-profile p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.our-profile h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+/* Headquarters Section */
 .our-headquarters {
   text-align: center;
   padding: 20px 0;
@@ -74,6 +116,7 @@ hr {
   overflow: hidden;
 }
 
+/* Contact Form Section */
 .contact {
   padding: 20px 40px;
 }
@@ -130,6 +173,7 @@ hr {
   align-items: center;
 }
 
+/* Display submitted values */
 #formResult {
   margin-top: 20px;
   padding: 15px;
@@ -138,6 +182,7 @@ hr {
   background-color: #f0f8ff;
 }
 
+/* Footer */
 footer {
   text-align: right;
   padding: 10px 40px;

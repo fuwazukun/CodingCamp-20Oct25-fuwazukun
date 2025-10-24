@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Welcome Message -->
+  <div id="welcomeMessage" class="welcome-message"></div>
+
   <hr>
+
+  <!-- Header -->
   <header>
     <img src="logo.png" alt="Logo" class="logo">
     <nav>
@@ -29,10 +34,33 @@
     We work with clients worldwide to bring their ideas to life with precision, scalability, and style.
   </p>
 
+<<<<<<< HEAD
   <h2>Vision & Mission</h2>
   <p><strong>Vision:</strong> To become the leading vector design agency providing creative solutions that inspire and engage.</p>
   <p><strong>Mission:</strong> Deliver professional vector designs with attention to detail, collaborate closely with clients, and continually innovate to meet modern design needs.</p>
 </section>
+=======
+  <!-- Slideshow -->
+  <section class="slideshow">
+    <img src="slide1.jpg" alt="Slide 1">
+    <img src="slide2.jpg" alt="Slide 2">
+    <img src="slide3.jpg" alt="Slide 3">
+  </section>
+  <hr>
+
+  <!-- Company / Profile Section -->
+  <section class="our-profile">
+    <h1>About Our Company</h1>
+    <p>
+      Pixlora Studio is a creative vector design agency specializing in high-quality illustrations and digital artwork. 
+      We collaborate with clients worldwide to turn ideas into scalable, professional designs.
+    </p>
+
+    <h2>Vision & Mission</h2>
+    <p><strong>Vision:</strong> To become the leading vector design agency providing creative solutions that inspire and engage.</p>
+    <p><strong>Mission:</strong> Deliver professional vector designs with attention to detail, collaborate closely with clients, and continually innovate to meet modern design needs.</p>
+  </section>
+>>>>>>> b3af96b (uhhh welcome message speech idk)
   <hr>
   
 <!-- Slideshow -->
@@ -62,94 +90,34 @@
   </section>
   <hr>
 
-  <!-- Contact Form Section -->
+  <!-- Contact Form -->
   <section class="contact">
     <h2>Message Us</h2>
     <div class="contact-container">
       <div class="contact-left">
-        <form id="messageForm">
-          <label for="name" id="nameLabel">Nama:</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" pattern="[A-Za-z\s]+" title="Letters only" required>
-
-          <label for="birthdate" id="birthLabel">Tanggal Lahir:</label>
-          <input type="date" id="birthdate" name="birthdate" required>
-
-          <label id="genderLabel">Jenis Kelamin:</label>
+        <form id="contactForm" action="#" method="post">
+          <input type="text" placeholder="Nama" name="name" required>
+          <input type="date" placeholder="Tanggal Lahir" name="dob" required>
           <div class="gender-options">
-            <input type="radio" id="male" name="gender" value="Laki-Laki" required>
-            <label for="male" id="maleLabel">Laki-Laki</label>
-            <input type="radio" id="female" name="gender" value="Perempuan">
-            <label for="female" id="femaleLabel">Perempuan</label>
+            <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+            <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
           </div>
-
-          <label for="message" id="msgLabel">Pesan:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
-          <button type="submit" id="submitBtn">Send</button>
+          <textarea placeholder="Pesan" name="message" required></textarea>
+          <button type="submit">Send</button>
         </form>
-      </div>
-      <div class="contact-right">
+        <div id="formResult"></div>
       </div>
     </div>
-
-    <!-- Display submitted values with timestamp -->
-    <div id="formResult"></div>
   </section>
   <hr>
 
   <!-- Footer -->
   <footer>
-    <p>Created by RevoU</p>
+    <p>Created By Fuwazukun 2025</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Language detection
-    const userLang = navigator.language || navigator.userLanguage;
-    if(userLang.startsWith('id')) {
-      document.getElementById('nameLabel').innerText = "Nama:";
-      document.getElementById('birthLabel').innerText = "Tanggal Lahir:";
-      document.getElementById('genderLabel').innerText = "Jenis Kelamin:";
-      document.getElementById('maleLabel').innerText = "Laki-Laki";
-      document.getElementById('femaleLabel').innerText = "Perempuan";
-      document.getElementById('msgLabel').innerText = "Pesan:";
-      document.getElementById('name').placeholder = "Nama Anda";
-      document.getElementById('message').placeholder = "Pesan Anda";
-      document.getElementById('submitBtn').innerText = "Kirim";
-    }
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
 
-    const form = document.getElementById('messageForm');
-    const resultDiv = document.getElementById('formResult');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const birthdate = document.getElementById('birthdate').value;
-      const gender = document.querySelector('input[name="gender"]:checked')?.value;
-      const message = document.getElementById('message').value;
-      const now = new Date();
-
-      // JS validation for letters only
-      if(!/^[A-Za-z\s]+$/.test(name)) {
-        alert("Nama must contain letters only!");
-        return;
-      }
-
-      // Popup alert
-      alert("Your information has been submitted!");
-
-      // Show submitted values with timestamp
-      resultDiv.innerHTML = `
-        <h3>Form Submitted at: ${now}</h3>
-        <p><strong>Nama:</strong> ${name}</p>
-        <p><strong>Tanggal Lahir:</strong> ${birthdate}</p>
-        <p><strong>Jenis Kelamin:</strong> ${gender}</p>
-        <p><strong>Pesan:</strong> ${message}</p>
-      `;
-
-      form.reset();
-    });
-  </script>
 </body>
 </html>
