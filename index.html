@@ -15,91 +15,117 @@
     <img src="logo.png" alt="Logo" class="logo">
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Message Us</a></li>
+        <li><a href="#home-section">Home</a></li>
+        <li><a href="#profile-section">Profile</a></li>
+        <li><a href="#gallery-section">Gallery</a></li>
+        <li><a href="#contact-section">Message Us</a></li>
       </ul>
     </nav>
   </header>
   <hr>
-  <main>
-        <!-- Home -->
-        <section id="home-section" class="hero-section p-4 min-h-[300px]">
-            <h1 class="text-3xl font-normal mb-3"><span id="greet-name"></span>Welcome</h1>
-            <p class="text-lg">This may be not much at least its enough :)</p>
-        </section>
 
-  <!-- Slideshow -->
-  <section class="slideshow">
-    <img src="slide1.jpg" alt="Slide 1">
-    <img src="slide2.jpg" alt="Slide 2">
-    <img src="slide3.jpg" alt="Slide 3">
+  <section id="home-section" class="hero-section p-4 min-h-[400px]">
+    <div class="overlay">
+      <h1 class="text-3xl font-normal mb-3" id="greet-name"></h1>
+      <p class="text-lg">yes that is me trying to code again after a long time</p>
+    </div>
   </section>
-  <hr>
+  
 
-  <!-- Company / Profile Section -->
-  <section class="our-profile">
-    <h1>About Our Company</h1>
-    <p>
-      Fuwazukun Studio is specializing in high-quality illustrations and digital artwork. 
-      I collaborate with clients worldwide to turn ideas into scalable, professional designs.
-    </p>
+    <hr>
 
-    <h2>Vision & Mission</h2>
-    <p><strong>Vision:</strong> Made vector design reachable by anyone.</p>
-    <p><strong>Mission:</strong> Unlimited revisions, design as you like, just don't use copyrighted stuff.</p>
-  </section>
-  <hr>
+    <!-- Profile Section -->
+    <section id="profile-section" class="our-profile">
+      <h1>About My Studio</h1>
+      <p>
+        specializes in high-quality illustrations, digital artwork and Photogrphy.
+        I collaborate with clients locally and worldwide (soon, hopefully) to turn ideas into scalable, professional designs.
+      </p>
 
-  <!-- Headquarters Section -->
-  <section class="our-headquarters">
+      <h2>Vision & Mission</h2>
+      <p><strong>Vision:</strong> Make vector design, precious moments and knowledge reachable by anyone.</p>
+      <p><strong>Mission:</strong> Unlimited revisions, capturing the moments, always free tech consultation.</p>
+    </section>
+
+    <hr>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="slideshow">
+      <h2>Gallery Showcase</h2>
+      <div class="slider">
+        <div class="slide-track">
+          <img src="img/img1.jpg" alt="cat1">
+          <img src="img/img2.jpg" alt="sunset">
+          <img src="img/img3.jpg" alt="funny pc">
+          <img src="img/img5.jpg" alt="cat2">
+          <img src="img/img6.jpg" alt="key">
+          <img src="img/img7.jpg" alt="better pc">
+          <img src="img/img9.jpg" alt="gaming laptop in a studio">
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+<!-- Headquarters Section -->
+<section class="our-headquarters">
+  <div class="hq-overlay">
     <h1>My Headquarters</h1>
-    <div class="hq">
-      <div class="map-circle">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.387113757628!2d106.6582727745429!3d-6.343886293645904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e4f63754924b%3A0xe9dc107058b05a80!2sSaung%20Makan%20Nasi%20Angi!5e0!3m2!1sid!2sid!4v1761313692372!5m2!1sid!2sid" 
-          width="200" 
-          height="200" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-      <p>Tangsel</p>
-    </div>
-  </section>
-  <hr>
+    <p>Tangsel</p>
+  </div>
 
-  <!-- Contact Form -->
-  <section class="contact">
-    <h2>Message Us</h2>
-    <div class="contact-container">
-      <div class="contact-left">
-        <form id="contactForm" action="#" method="post">
-          <input type="text" placeholder="Nama" name="name" required>
-          <input type="date" placeholder="Tanggal Lahir" name="dob" required>
-          <div class="gender-options">
-            <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
-            <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
-          </div>
-          <textarea placeholder="Pesan" name="message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <div id="formResult"></div>
-      </div>
+  <!-- Fullscreen Map Background -->
+  <iframe
+    class="hq-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.387113757628!2d106.6582727745429!3d-6.343886293645904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e4f63754924b%3A0xe9dc107058b05a80!2sSaung%20Makan%20Nasi%20Angi!5e0!3m2!1sid!2sid!4v1761313692372!5m2!1sid!2sid"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+    <hr>
+
+   <!-- Contact Form -->
+<section id="contact-section" class="contact">
+  <h2>Message Us</h2>
+  <div class="contact-container">
+    <div class="contact-left">
+      <form id="contactForm" action="https://formspree.io/f/xvgvpged" method="POST">
+        <input type="text" name="name" placeholder="Nama" required>
+        <input type="date" name="dob" placeholder="Tanggal Lahir" required>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+          <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+        </div>
+        <textarea name="message" placeholder="Pesan" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="formResult" class="result-message"></div>
     </div>
-  </section>
-  <hr>
+  </div>
+</section>
+
+    <hr>
+  </main>
+
+  <!-- Development Note Section -->
+<section class="dev-note">
+  <p>
+    This page is still in development because I need to wait a full month to get my old account back. 
+    All my vector designs that I made are in there. If you fill the Contact Us section above, 
+    it will be sent directly to my email using Formspree. 
+    Stay tuned, thank you for visiting, happy coding! 😊
+  </p>
+</section>
 
   <!-- Footer -->
   <footer>
-    <p>Created by Fuwazukun</p>
+    <p>Created by Fuwazu</p>
   </footer>
 
-  <!-- Link to external JS -->
-  <script src="script.js"></script>
-
+  <!-- External JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>
